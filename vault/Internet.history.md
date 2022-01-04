@@ -2,7 +2,7 @@
 id: feftdh3gRzCphHbSBjtR3
 title: history
 desc: ''
-updated: 1641151649441
+updated: 1641312264670
 created: 1641145909462
 ---
 # Internet History
@@ -67,4 +67,4 @@ all packets have a certain size. A from and to address. A label
 
 The post office is called a **Gateway**
 
-
+## 1
