@@ -11,8 +11,8 @@ site:
         - root
     siteRootDir: docs
     usePrettyRefs: true
-    title: Dendron
-    assetsPrefix: My-Knowledge-Base
+    title: My Notes
+    assetsPrefix: My-Notes
     siteUrl: https://shafayat1004.github.io
     description: Personal knowledge space
     siteLastModified: true
