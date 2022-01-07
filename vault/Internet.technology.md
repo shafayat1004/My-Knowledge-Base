@@ -2,11 +2,11 @@
 id: SRJpDqbWI5BPydkk6Wal2
 title: technology
 desc: ''
-updated: 1641566423516
+updated: 1641566734854
 created: 1641313602955
 ---
 
-<style>
+<!-- <style>
     .markdown-body{
         background-color: #FFFFDD;
         font-family:Latin-Modern;
@@ -20,7 +20,7 @@ created: 1641313602955
     }
 </style>
 
-<div class="markdown-body">
+<div class="markdown-body"> -->
 
 
 # Internet Technology
@@ -51,7 +51,7 @@ $\therefore$ They only focus on packets. Not reliability.
 > This approach was taken to break the problem of designing a network into smaller subproblems.
 
 |The Layers|
--
+|-|
 |Application Layer (Web, email, File Transfer) [[Internet.technology.application_layer]]|
 |Transport Layer (TCP) [[Internet.technology.transport_layer]]. Reliable Connections|
 |Internetwork Layer(IP) [[Internet.technology.ip]]. Simple, Scalable, Unreliable|
@@ -74,5 +74,5 @@ Ownership of the Domain names are also right to left.
 Only the domain owners of `.edu` can decide who can use the name. Once they allow an organization to use it, like `.umich.edu`, committee within U Michigan can decide who can use their name. Once a school like School of Information requests for it, then they can use `.si.umich.edu`.
 
 
-</body>
+<!-- </body> -->
 
