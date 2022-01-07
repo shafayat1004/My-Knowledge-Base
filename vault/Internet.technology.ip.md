@@ -2,7 +2,7 @@
 id: oC7u1YeSbgDORb79xExMN
 title: ip
 desc: ''
-updated: 1641558477699
+updated: 1641576922858
 created: 1641319146397
 ---
 
@@ -21,7 +21,7 @@ They are not controlled by a single organization. Address ranges are assigned. T
 
 ## IP Address Format
 - four numbers separated by dots.
-- each number is 1$\to$255, a 32-bit number
+- each number is 1 $\to$ 255, a 32-bit number
 - broken into two parts:
     - Network Number (prefix), e.g 141.211.\*.\*
     - Computer Number (within the network) e.g \*.\*.144.188

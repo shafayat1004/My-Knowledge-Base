@@ -42,7 +42,7 @@ The 20 year period was about **Efficient Message Transmission** like perfecting 
 
 > A: Break it into packets $\to$ label each packet for sequence $\to$ add a **to** and **from** address. 
 > $\therefore$ the receiver has everything they need to reconstruct the message even if the packets don't arrive in sequence.
-
+****
 This lead to a shared network infrastructure where the computers no longer had to have lots of disk space or compute power. They only needed to forward packets. **A Router** 
 
 $\therefore$ They only focus on packets. Not reliability.
