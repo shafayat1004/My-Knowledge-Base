@@ -2,7 +2,7 @@
 id: SRJpDqbWI5BPydkk6Wal2
 title: technology
 desc: ''
-updated: 1641566891458
+updated: 1641567140625
 created: 1641313602955
 ---
 
