@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@dendronhq/dendron-11ty-legacy": "^0.76.0",
+    "@dendronhq/dendron-cli": "^0.76.0"
+  }
+}
