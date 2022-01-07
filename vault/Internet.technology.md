@@ -2,9 +2,26 @@
 id: SRJpDqbWI5BPydkk6Wal2
 title: technology
 desc: ''
-updated: 1641324546358
+updated: 1641566423516
 created: 1641313602955
 ---
+
+<style>
+    .markdown-body{
+        background-color: #FFFFDD;
+        font-family:Latin-Modern;
+    }
+    h1,h2,h3,h4{
+        text-align:center;
+    }
+    table{
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<div class="markdown-body">
+
 
 # Internet Technology
 
@@ -35,108 +52,27 @@ $\therefore$ They only focus on packets. Not reliability.
 
 |The Layers|
 -
-|Application Layer (Web, email, file transfer)|
-|Transport Layer (TCP)|
-|Internetwork Layer(IP)|
-|Link Layer|
+|Application Layer (Web, email, File Transfer) [[Internet.technology.application_layer]]|
+|Transport Layer (TCP) [[Internet.technology.transport_layer]]. Reliable Connections|
+|Internetwork Layer(IP) [[Internet.technology.ip]]. Simple, Scalable, Unreliable|
+|Link Layer [[Internet.technology.link_layer]] (Ethernet, WiFi). Physical Connections|
 
 We currently follow the **TCP/IP** model.
 Also existed was a 7 layer **OSI (Open System Interconnection)** model.
 
-## Link Layer (or Physical Layer)
-Deals with the problems connecting one computer to another computer. 
-- Only worries about data across one **_hop_**. 
-- Like what voltages to use, 
-- How to send data. 
-- How to deal with multiple computers using the same wire.
 
-The tech that came out of this are
-- Ethernet
-- WiFi
-- Cable Modem
-- DSL
-- Satellite
-- Optical
+#### Domain Name System (DNS)
+It converts user-friendly names like `www.umich.edu` to network-friendly names like `141.211.32.166`. 
+It can be thought of as being in between the **[[IP|Internet.technology.ip]]** layer and the **[[Transport|Internet.technology.transport_layer]]** layer.
+- IP Addresses reflect on technical "geography". Read left $\to$ right
+- Domain names reflect on organizational structure. Read right $\to$ left.
 
-#### Link Layer Addresses
-All link devices like Wireless Modules have a specific address built into them by the manufacturer. **MAC Address**
-> Q: How do we ensure that, in an environment where multiple devices are hooked to something like an Ethernet Hub or like a WiFi Network, if two devices want to talk to each other, they can so.
+So a Domain Name like `www.sets.iub.edu.bd` is read like:
+In Bangladesh $\to$ an educational institution $\to$ IUB $\to$ SETS school of IUB $\to$ www, a particular server at the school.
 
-> A: The address of the sender and receiver is encoded into the packet
+Ownership of the Domain names are also right to left. 
+Only the domain owners of `.edu` can decide who can use the name. Once they allow an organization to use it, like `.umich.edu`, committee within U Michigan can decide who can use their name. Once a school like School of Information requests for it, then they can use `.si.umich.edu`.
 
-#### Avoiding Chaos
-For Ethernet, it uses **Carrier Sense Media Access with Collision Detection (CSMA/CD):**
 
-0. We have a data ready to go
-0. "**_Listen_**". If there is already data being transferred, wait.
-0. Once it goes silent, send.
-0. Listen again to see if your own data is coming back. If so, great.
-0. If a collision does happen, the data needs to back off. "[[Complex math|complex math]]" makes it so that fairness is maintained.
+</body>
 
-#### Internetwork Layer
-It is the notion of forwarding each each of the packets with to and from addresses enough times so that the reach their destination.
-
-The Link Layer only works on one link.
-The Internet Layer worries about all the links and the proper sequence to follow to get from host to destination.
-
-**We don't worry about reliability**
-
-They introduce a new type of address **IP Address**.
->**IP Address:** It is the worldwide number which  is associated with one particular workstation or server. 
-
-They are not controlled by a single organization. Address ranges are assigned. They are based on where the station is connected.
-
-They [[change|Internet.technology.ip]] their addresses, get reorganized once a while.
-
-**Routers** maintain **[[Router Tables|Internet.technology.ip]]** which are based on: 
-- the destination network address
-- bandwidth on adjacent links
-- state of the neighbor nodes (up or not)
-- .....
-- .....
-    
-Routers use these to determine the best outbound route to each network number.
-They are also dynamic in adjusting their best paths by "asking" other routers for the best path.
-If they encounter a new Network Address, they can ask their neighbor routers and their neighbor routers for the information.
-
-#### Problem of Computers that move around
-> Q: How is it so that a single device can send and receive data from the Internet even if it changes Network Addresses when being in different places?
-
-> A: When a device tries to enter a network, it asks for an IP address. The Access Point provides an IP address to the device that corresponds to the Network Address of the Access Point.
-
-This is known as the **Dynamic Host Configuration Protocol (DHCP)**
-
-**But there are a lot of devices!**
-
-Don't fret for there are special addresses known as :
-
-#### Non-Routable Addresses
-Moving from one house to another, we see that our IP is typically 192.168.\*.\*.
-
-- The ISP provides the home router a real global routable address.
-- But the router gives out local addresses with 192.168 as suffix.
-- This doesn't make sense in the internet and only the router knows what device the prefix maps to.
-- When a home device needs to access the internet, the router/access point/base station changes the Network Address of the packet to the ISP provided, routable, one. 
-
-This is done through a process called **Network Address Translation (NAT)**
-
-#### Problem of packets cycling across routers infinitely
-An improperly configured network of routers may cause packets to cycle through then indefinitely. Since the world of the router is narrow, it only determines which path is best to follow. So there is no way to tackle the fact that the packets may be cycling due to improper configuration.
-
-**Solution:**
->**Time to Live (TTL):** is a number assigned to an IP Packet that goes down by one each time the packet passes through a router. Usually starting from a value of 25. Can start from 255.
-
-The routers, when they encounter a packet with TTL 0 after decrementing, they throw the packet away.
-**Then it sends a notification back to the sender indicating the packet was thrown away**
-
-#### Traceroute
-- Starts by sending a broken packet with a TTl of 1.
-- First Router sends notification back
-- Sends packet again with TTL of 2
-- packet reaches second router and second router sends notification again.
-- repeats until actual destination is reached
-- $\therefore$ we can **trace** the **route** the packet took to reach the destination.
-
-IP works through **Best Effort**. It tries to efficiently transfer packets.
-**It does not guarantee delivery**.
-But the flexible nature of it makes it so that its scalable to very large networks. Therefore "reliable"
