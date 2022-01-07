@@ -2,7 +2,7 @@
 id: SRJpDqbWI5BPydkk6Wal2
 title: technology
 desc: ''
-updated: 1641566734854
+updated: 1641566891458
 created: 1641313602955
 ---
 
@@ -61,7 +61,7 @@ We currently follow the **TCP/IP** model.
 Also existed was a 7 layer **OSI (Open System Interconnection)** model.
 
 
-#### Domain Name System (DNS)
+## Domain Name System (DNS)
 It converts user-friendly names like `www.umich.edu` to network-friendly names like `141.211.32.166`. 
 It can be thought of as being in between the **[[IP|Internet.technology.ip]]** layer and the **[[Transport|Internet.technology.transport_layer]]** layer.
 - IP Addresses reflect on technical "geography". Read left $\to$ right
