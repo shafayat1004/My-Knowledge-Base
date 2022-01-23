@@ -2,7 +2,7 @@
 id: feftdh3gRzCphHbSBjtR3
 title: history
 desc: ''
-updated: 1641312264670
+updated: 1642764689618
 created: 1641145909462
 ---
 # Internet History
@@ -67,4 +67,6 @@ all packets have a certain size. A from and to address. A label
 
 The post office is called a **Gateway**
 
-## 1
+$$
+\int^b_a \frac{x}{(x+2)^2}\ dx
+$$
