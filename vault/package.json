@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "@dendronhq/dendron-11ty-legacy": "^0.76.0",
-    "@dendronhq/dendron-cli": "^0.7.2"
+    "@dendronhq/dendron-cli": "^0.78.4"
   }
 }
