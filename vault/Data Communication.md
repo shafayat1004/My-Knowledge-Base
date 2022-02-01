@@ -2,7 +2,7 @@
 id: Wmcrv6EMAzHxHPOY9Muwg
 title: Data Communication
 desc: ''
-updated: 1643703695304
+updated: 1643703860779
 created: 1643699787707
 ---
 
@@ -20,6 +20,10 @@ graph LR
     B-->A
 ```
 >**Full-Duplex:** Two-Way communication at the same time
+```mermaid
+graph LR
+    A---B
+```
 
 ### Effectiveness
 - > **Delivery:** The data actually reaches its intended recipient.
