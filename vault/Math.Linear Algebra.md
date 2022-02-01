@@ -2,7 +2,7 @@
 id: oLeUJx2Gx7a1Lv465CBKK
 title: Linear Algebra
 desc: ''
-updated: 1642940553768
+updated: 1643689083566
 created: 1642014686291
 ---
 ### Vectors
@@ -60,6 +60,49 @@ $$
 
 If $\nexists$ a valid solution of $c_1,\ c_2,\ c_3$ for any given set of a, b and c values, then the set of vectors **do not span** $\R^3$
 
+#### Inner Product
+$$
+\textbf{a} =\begin{pmatrix}
+a_1\\a_2\\a_3
+\end{pmatrix}
+,
+\textbf{b} = \begin{pmatrix}
+b_1\\b_2\\b_3
+\end{pmatrix}\\
+\textbf{a}.\textbf{b}=a_1b_1+a_2b_2+a_3b_3
+$$
+Using matrix notation can also write it as,
+$$
+\textbf{a}^T\textbf{b}=a_1b_1+a_2b_2+a_3b_3
+$$
+where,
+$$
+\begin{pmatrix}
+a_1&a_2&a_3
+\end{pmatrix}
+\begin{pmatrix}
+b_1\\b_2\\b_3
+\end{pmatrix}
+$$
+
+Knowing all this, we can say,
+$$
+\textbf{a}^T\textbf{a} = a_1^2+a_2^2+a_3^2\\
+\therefore\sqrt{\textbf{a}^T\textbf{a}} = ||\textbf{a}||
+$$
+Sum of all elements of a vector:
+$$
+\textbf{1}^T\textbf{a} = a_1+a_2+a_3
+$$
+Mean of vector:
+$$
+\left(\frac{1}{n}\right)^T\textbf{a} = \frac{a_1+a_2+a_3}{n}
+$$
+Inner product with a unit vector:
+$$
+e_i^T\textbf{a} = a_i
+$$
+
 #### Linear Independence
 In a set of vectors, If any one vector can be represented as a linear combination of the others, then the set is linearly dependent.    
 
@@ -82,3 +125,9 @@ z_1\\z_2\\z_3
 \end{pmatrix}
 $$
 If the only solution to this is **not** $c_1=c_2=c_3=0$, then the set is **not Linearly Independent** 
+
+#### Linear Superposition
+If, for a function, $f(\alpha x+\beta y)\to \alpha f(x) + \beta f(y)$ then, the function is linear.
+
+#### Affine Functions
+Functions such that, $f(\alpha_1x_1+\alpha_2x_2+...+\alpha_nx_n)=$ is linear, and $\alpha_1 +\alpha_2+...+\alpha_n=1$

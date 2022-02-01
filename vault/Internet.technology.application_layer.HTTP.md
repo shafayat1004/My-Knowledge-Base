@@ -2,7 +2,7 @@
 id: PUzs9L0rXvAxIEIUvqCEm
 title: HTTP
 desc: ''
-updated: 1641582342627
+updated: 1643682032649
 created: 1641580285612
 ---
 
@@ -15,7 +15,7 @@ created: 1641580285612
 1. Receives a `HTTP Response` from the server.
 1. Document gets displayed on the screen
 
-When a link to a html page is clicked, a `GET` command is sent. e.g `GET /page2.html`.
+When a link to a [[HTML|Internet.technology.HTML]] page is clicked, a `GET` command is sent. e.g `GET /page2.html`.
 
 The [Internet Engineering Task Force (IETF)](https://www.ietf.org/) develops the standards for all of the Internet protocols (inner workings).
 
