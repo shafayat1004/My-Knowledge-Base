@@ -171,7 +171,7 @@
     <meta itemprop="headline" content="Blockchain">
     
     <meta itemprop="datePublished" content="2022-01-24T14:55:18+00:00">
-    <meta itemprop="dateModified" content="2022-01-24T15:15:01+00:00">
+    <meta itemprop="dateModified" content="2022-02-06T03:40:16+00:00">
 
     <div class="page__inner-wrap">
 
@@ -190,6 +190,42 @@
 <p>Using this, people can make decentralized applications/organizations. And make <a href="https://shafayat1004.github.io/My-Notes/notes/wP0TIxdGh6qyKbXlgi06p.html">Smart Contracts</a>.</p>
 <h3 id="determinism"><a aria-hidden="true" class="anchor-heading" href="#determinism"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Determinism</h3>
 <p>A "walled garden". Everything that happens in the blockchain happens inside it.</p>
+<h3 id="understanding-blockchains"><a aria-hidden="true" class="anchor-heading" href="#understanding-blockchains"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Understanding Blockchains</h3>
+<p>First we need to know what <a href="https://shafayat1004.github.io/My-Notes/notes/0CQEZ7axRCPwuxaafY5Xz.html">hashing</a> means.</p>
+<h3 id="a-block"><a aria-hidden="true" class="anchor-heading" href="#a-block"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>A Block</h3>
+<p>A block consists of a <strong>Nonce</strong>, <strong>Data</strong>, <strong>Hash</strong>.
+The Nonce is what the <strong>Miners</strong> have to find to solve a problem. Whenever a <strong>node</strong> mines a block, it gets paid. The problem can be anything. It can be a problem of finding a hash such that the first four values are <code>0000</code>.
+The problems vary from blockchain to blockchain. The Nonce is the solution to the problem.</p>
+<h3 id="a-blockchain"><a aria-hidden="true" class="anchor-heading" href="#a-blockchain"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>A Blockchain</h3>
+<p>In a blockchain, in addition to the existing elements of a block, there is also an entry that stores the <strong>Hash of the previous block</strong>. Similar to a linked list.</p>
+<p>Now, since hashes are unique for a specific given data, if any bad actor means to change the data in any previous block, the hash would change as well. And so, the blockchain will become invalid as the next block will be now referring to a hash that no longer exists.</p>
+<p>So now, the bad actor has to change all the successive blocks' "previous hash" entry to make the chain valid. To do so, they must <strong>mine</strong> all the blocks again since the contents of the block has changed.</p>
+<h3 id="decentralized-blockchain"><a aria-hidden="true" class="anchor-heading" href="#decentralized-blockchain"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Decentralized Blockchain</h3>
+<p>Even if the bad actor changes all the blocks and is able to make the chain valid, the decentralized nature of the blockchain means that they'd have to change the Blockchain in all other devices that have it. Which would be a hard thing to do.</p>
+<p>So when one <strong>peer</strong> is corrupted, but the majority of peers are in sync (all have the same final hash), it would be easily known which peer was corrupted and then it would be considered an invalid from then on.</p>
+<h3 id="tokens"><a aria-hidden="true" class="anchor-heading" href="#tokens"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Tokens</h3>
+<p>Instead of the abstract "data". We would have a <strong>Transaction</strong> section in the block.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Block: 5</th></tr></thead><tbody><tr><td>Nonce: someNumber</td></tr><tr><td>Tx: list of some amount of money transfer from one person to another</td></tr><tr><td>Prev: hash of previous block</td></tr><tr><td>Hash: calculated/mined hash of this block</td></tr></tbody></table>
 <hr>
 <strong>Children</strong>
 <ol>
@@ -225,7 +261,7 @@
             
               <div class="d-flex mt-2">
               <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                Page last modified: <span class="d-inline-block">1/24/2022</span>.
+                Page last modified: <span class="d-inline-block">2/6/2022</span>.
               </p>
             
                 

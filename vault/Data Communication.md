@@ -2,7 +2,7 @@
 id: Wmcrv6EMAzHxHPOY9Muwg
 title: Data Communication
 desc: ''
-updated: 1643703860779
+updated: 1643705348139
 created: 1643699787707
 ---
 
@@ -43,16 +43,10 @@ graph LR
 #### Mesh Topology
 ```mermaid
 graph LR
-    A---B
-    B---C
-    C---A
-    A---D
-    C---D
-    B---D
-    A---E
-    B---E
-    C---E
-    D---E
+    A & B & C & D --- E
+    A & C & D --- B
+    A & D --- C
+    A --- D
 ```
 Each device is connected to all others through a point-to-point connection.
 In this topology, $\frac{n(n-1)}{2}$ connections are required for `n` devices.
@@ -63,10 +57,10 @@ In this topology, $\frac{n(n-1)}{2}$ connections are required for `n` devices.
 #### Star Topology
 ```mermaid
 graph TD
-    Hub---A
-    Hub---B
-    Hub---C
-    Hub---D
+    HUB[[HUB]]---A
+    HUB---B
+    HUB---C
+    HUB---D
 ```
 - Advantage:
     - `n` connections/wiring required.
@@ -76,9 +70,9 @@ graph TD
 #### Bus Topology
 ```mermaid
 graph LR
-    cable_start---tap_1
-    tap_1---tap_2
-    tap_2---tap_3
+    cable_start---tap_1([tap])
+    tap_1---tap_2([tap])
+    tap_2---tap_3([tap])
     tap_3---cable_continued
     tap_1---A
     tap_2---B
@@ -107,23 +101,23 @@ graph LR
 ### Hybrid
 ```mermaid
 graph TD
-    HUB---tap_1
-    tap_1---tap_2
-    tap_2---tap_3
+    HUB[[HUB]]---tap_1([tap])
+    tap_1---tap_2([tap])
+    tap_2---tap_3([tap])
     tap_3---.
     tap_1---Device_A
     tap_2---Device_B
     tap_3---Device_C
-    HUB---tap_4
-    tap_4---tap_5
-    tap_5---tap_6
+    HUB---tap_4([tap])
+    tap_4---tap_5([tap])
+    tap_5---tap_6([tap])
     tap_6---..
     tap_4---Device_D
     tap_5---Device_E
     tap_6---Device_F
-    HUB---tap_7
-    tap_7---tap_8
-    tap_8---tap_9
+    HUB---tap_7([tap])
+    tap_7---tap_8([tap])
+    tap_8---tap_9([tap])
     tap_9---...
     tap_7---Device_G
     tap_8---Device_H

@@ -171,7 +171,7 @@
     <meta itemprop="headline" content="Data Communication">
     
     <meta itemprop="datePublished" content="2022-02-01T13:16:27+00:00">
-    <meta itemprop="dateModified" content="2022-02-01T14:24:20+00:00">
+    <meta itemprop="dateModified" content="2022-02-01T14:49:08+00:00">
 
     <div class="page__inner-wrap">
 
@@ -243,16 +243,10 @@
 <h4 id="mesh-topology"><a aria-hidden="true" class="anchor-heading" href="#mesh-topology"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Mesh Topology</h4>
 <div class="mermaid">
   graph LR
-    A---B
-    B---C
-    C---A
-    A---D
-    C---D
-    B---D
-    A---E
-    B---E
-    C---E
-    D---E
+    A &#x26; B &#x26; C &#x26; D --- E
+    A &#x26; C &#x26; D --- B
+    A &#x26; D --- C
+    A --- D
 </div>
 <p>Each device is connected to all others through a point-to-point connection.
 In this topology, <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>n</mi><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{n(n-1)}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span> connections are required for <code>n</code> devices.</p>
@@ -271,10 +265,10 @@ In this topology, <span class="math math-inline"><span class="katex"><span class
 <h4 id="star-topology"><a aria-hidden="true" class="anchor-heading" href="#star-topology"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Star Topology</h4>
 <div class="mermaid">
   graph TD
-    Hub---A
-    Hub---B
-    Hub---C
-    Hub---D
+    HUB[[HUB]]---A
+    HUB---B
+    HUB---C
+    HUB---D
 </div>
 <ul>
 <li>Advantage:
@@ -292,9 +286,9 @@ In this topology, <span class="math math-inline"><span class="katex"><span class
 <h4 id="bus-topology"><a aria-hidden="true" class="anchor-heading" href="#bus-topology"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Bus Topology</h4>
 <div class="mermaid">
   graph LR
-    cable_start---tap_1
-    tap_1---tap_2
-    tap_2---tap_3
+    cable_start---tap_1([tap])
+    tap_1---tap_2([tap])
+    tap_2---tap_3([tap])
     tap_3---cable_continued
     tap_1---A
     tap_2---B
@@ -338,23 +332,23 @@ In this topology, <span class="math math-inline"><span class="katex"><span class
 <h3 id="hybrid"><a aria-hidden="true" class="anchor-heading" href="#hybrid"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Hybrid</h3>
 <div class="mermaid">
   graph TD
-    HUB---tap_1
-    tap_1---tap_2
-    tap_2---tap_3
+    HUB[[HUB]]---tap_1([tap])
+    tap_1---tap_2([tap])
+    tap_2---tap_3([tap])
     tap_3---.
     tap_1---Device_A
     tap_2---Device_B
     tap_3---Device_C
-    HUB---tap_4
-    tap_4---tap_5
-    tap_5---tap_6
+    HUB---tap_4([tap])
+    tap_4---tap_5([tap])
+    tap_5---tap_6([tap])
     tap_6---..
     tap_4---Device_D
     tap_5---Device_E
     tap_6---Device_F
-    HUB---tap_7
-    tap_7---tap_8
-    tap_8---tap_9
+    HUB---tap_7([tap])
+    tap_7---tap_8([tap])
+    tap_8---tap_9([tap])
     tap_9---...
     tap_7---Device_G
     tap_8---Device_H
